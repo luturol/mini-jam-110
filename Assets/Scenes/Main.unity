@@ -1449,6 +1449,7 @@ GameObject:
   - component: {fileID: 709499257}
   - component: {fileID: 709499256}
   - component: {fileID: 709499255}
+  - component: {fileID: 709499258}
   m_Layer: 5
   m_Name: Done Raia
   m_TagString: Untagged
@@ -1529,6 +1530,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &709499258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709499253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2897c157e8f59584a99095f711d33e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &740076309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1773,7 @@ GameObject:
   - component: {fileID: 829981899}
   - component: {fileID: 829981898}
   - component: {fileID: 829981897}
+  - component: {fileID: 829981900}
   m_Layer: 5
   m_Name: Review QA Raia
   m_TagString: Untagged
@@ -1840,6 +1854,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &829981900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829981895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2897c157e8f59584a99095f711d33e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &842997339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,6 +2835,7 @@ GameObject:
   - component: {fileID: 1529895298}
   - component: {fileID: 1529895297}
   - component: {fileID: 1529895296}
+  - component: {fileID: 1529895299}
   m_Layer: 5
   m_Name: Labels Raia
   m_TagString: Untagged
@@ -2889,6 +2916,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &1529895299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529895294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2897c157e8f59584a99095f711d33e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1534392355
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,7 +3014,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1534901057}
   - component: {fileID: 1534901059}
+  - component: {fileID: 1534901061}
   - component: {fileID: 1534901058}
+  - component: {fileID: 1534901060}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3041,6 +3082,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534901056}
   m_CullTransparentMesh: 1
+--- !u!114 &1534901060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534901056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f0b80f836770c4ca4a45ba0565a218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 463124055}
+  DropCorrectly: 0
+--- !u!225 &1534901061
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534901056}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1574406627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3120,7 @@ GameObject:
   - component: {fileID: 1574406631}
   - component: {fileID: 1574406630}
   - component: {fileID: 1574406629}
+  - component: {fileID: 1574406632}
   m_Layer: 5
   m_Name: In Progress Raia
   m_TagString: Untagged
@@ -3133,6 +3201,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &1574406632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574406627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2897c157e8f59584a99095f711d33e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714604047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,6 +3377,7 @@ GameObject:
   - component: {fileID: 1758204560}
   - component: {fileID: 1758204559}
   - component: {fileID: 1758204558}
+  - component: {fileID: 1758204561}
   m_Layer: 5
   m_Name: Todo Raia
   m_TagString: Untagged
@@ -3377,6 +3458,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &1758204561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758204556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2897c157e8f59584a99095f711d33e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1767268440
 GameObject:
   m_ObjectHideFlags: 0
