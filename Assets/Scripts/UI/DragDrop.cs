@@ -42,6 +42,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
         {
             Destroy(duplicate);
         }
+
+        DropCorrectly = false;
     }
 
     public void OnPointerDown(PointerEventData eventData)
