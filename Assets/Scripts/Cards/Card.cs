@@ -63,13 +63,7 @@ public class Card : MonoBehaviour
             Debug.LogError("Necessário adicionar o Owner Text, Owner Image e CardConfiguration no objeto do Card");
         }
         #endregion base setup
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    }    
 
     private string GenerateDurationTime()
     {
