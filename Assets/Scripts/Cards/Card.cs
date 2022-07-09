@@ -11,6 +11,7 @@ public class Card : MonoBehaviour
     [SerializeField] private string _title;
     [SerializeField] private string _onwer;
     [SerializeField][Range(1, 3)] private int _priority;
+    [SerializeField] private Image _cardImage;
 
     [Header("Card configuration")]
     [SerializeField] private TextMeshProUGUI _titleText;
@@ -18,13 +19,12 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _ownerText;
     [SerializeField] private Image _ownerImage;
 
-    private Image _cardImage;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         #region base setup
-        _cardImage = GetComponent<Image>();
 
         if (_cardConfiguration && _cardImage)
         {
