@@ -21,6 +21,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
     {
         _duplicate = Instantiate(gameObject);
         _duplicate.transform.position = gameObject.transform.position;
+        
+        var cardNew = _duplicate.GetComponent<Card>();
+        var cardOld = GetComponent<Card>();
+
+        if (cardNew && cardOld)
+        {
+            cardNew.IsDuplicate = true;            
+            _duplicate.GetComponent<Card>().DuplicateValues(cardOld);
+        }
 
         _canvasGroup = _duplicate.GetComponent<CanvasGroup>();
         _canvasGroup.alpha = .6f;
