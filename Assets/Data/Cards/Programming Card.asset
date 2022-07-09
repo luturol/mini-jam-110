@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Programming Card
   m_EditorClassIdentifier: 
   CardType: 0
-  Color: {r: 0.15294118, g: 0.2392157, b: 0.3921569, a: 0}
+  Color: {r: 0.15294118, g: 0.2392157, b: 0.3921569, a: 1}

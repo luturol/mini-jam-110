@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Art Card
   m_EditorClassIdentifier: 
   CardType: 1
-  Color: {r: 0.32941177, g: 0.18823531, b: 0.28627452, a: 0}
+  Color: {r: 0.32941177, g: 0.18823531, b: 0.28627452, a: 1}

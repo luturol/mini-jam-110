@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Game Design Card
   m_EditorClassIdentifier: 
   CardType: 2
-  Color: {r: 0.34117648, g: 0.17254902, b: 0.058823533, a: 0}
+  Color: {r: 0.34117648, g: 0.17254902, b: 0.058823533, a: 1}
