@@ -12,14 +12,13 @@ public class Lane : MonoBehaviour, IDropHandler
     {
         var dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
 
-        Debug.Log(dragDrop);
         //object being drag
         if (eventData.pointerDrag != null && dragDrop != null)
         {
             if (this.CompareTag("Backlog"))
             {
-                Debug.Log("Não é possivel colocar no backlog");
                 dragDrop.DropCorrectly = false;
+                
                 return;
             }
             
