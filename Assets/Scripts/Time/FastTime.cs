@@ -7,21 +7,24 @@ using UnityEngine;
 public class FastTime : MonoBehaviour
 {
     [SerializeField] private float _passedTime;
-    [SerializeField] private float _timeMultiplier;
+    [SerializeField] public static float TimeMultiplier = 3000f;
 
     private TextMeshProUGUI _text;
     private int days = 0;
-
+    private TimerCounter _timerCounter;
     // Start is called before the first frame update
     void Start()
     {
         _text = GetComponent<TextMeshProUGUI>();
+        
+        _timerCounter = new TimerCounter();
+        _timerCounter.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _passedTime += Time.deltaTime * _timeMultiplier;
+        _passedTime += _timerCounter.Tick();
 
         var time = TimeSpan.FromSeconds(_passedTime);
         
