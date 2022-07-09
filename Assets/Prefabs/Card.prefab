@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9211348457065914985}
   - component: {fileID: 3198494379412816241}
   - component: {fileID: 9211348457065914987}
+  - component: {fileID: 4765790151306259752}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -107,6 +108,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 0}
   DropCorrectly: 0
+--- !u!114 &4765790151306259752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211348457065914991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ed29278c7f3b74fb412922a1933473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cardConfiguration: {fileID: 0}
+  _title: Teste
+  _onwer: MF
+  _priority: 0
+  _titleText: {fileID: 9211348458363437527}
+  _durationText: {fileID: 9211348457792405475}
+  _ownerText: {fileID: 9211348457432163896}
+  _ownerImage: {fileID: 9211348457288498484}
 --- !u!1 &9211348457288498474
 GameObject:
   m_ObjectHideFlags: 0
