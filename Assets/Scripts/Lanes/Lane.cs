@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Lane : MonoBehaviour, IDropHandler
 {
     private VerticalLayoutGroup _content;
-    
+
     public void OnDrop(PointerEventData eventData)
     {
         var dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
@@ -15,14 +15,21 @@ public class Lane : MonoBehaviour, IDropHandler
         Debug.Log(dragDrop);
         //object being drag
         if (eventData.pointerDrag != null && dragDrop != null)
-        {            
+        {
+            if (this.CompareTag("Backlog"))
+            {
+                Debug.Log("Não é possivel colocar no backlog");
+                dragDrop.DropCorrectly = false;
+                return;
+            }
+            
             Debug.Log(dragDrop);
             dragDrop.DropCorrectly = true;
-            
+
             var duplicate = dragDrop.GetDuplicate();
-            
+
             duplicate.transform.SetParent(_content.transform);
-            duplicate.transform.localScale = new Vector3(1, 1, 1);            
+            duplicate.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 

@@ -47,6 +47,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
         {
             Destroy(_duplicate);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         DropCorrectly = false;
     }
