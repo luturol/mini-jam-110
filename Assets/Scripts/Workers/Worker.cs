@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Worker : MonoBehaviour
 {
-    [SerializeField] private GameObject _laneContent;
+    [SerializeField] private GameObject _inProgressContentLane;
+    [SerializeField] private GameObject _toDoContentLane;
     [SerializeField] private CardType _cardTypeToWork;
     [SerializeField] private Card _cardDoing;
     [SerializeField] private bool _isAvailableToWork = true;
@@ -23,7 +24,7 @@ public class Worker : MonoBehaviour
     {
         if (_cardDoing == null && _isAvailableToWork)
         {
-            var card = _laneContent.GetComponentsInChildren<Card>()
+            var card = _toDoContentLane.GetComponentsInChildren<Card>()
                         .ToList()
                         .FirstOrDefault(e => string.IsNullOrEmpty(e.GetOwner()) &&
                             e.GetCardConfiguration().CardType == _cardTypeToWork);
@@ -33,6 +34,8 @@ public class Worker : MonoBehaviour
                 card.SetWorker(this);
                 _cardDoing = card;
                 _isAvailableToWork = false;
+
+                card.transform.SetParent(_inProgressContentLane.transform);
             }
 
         }

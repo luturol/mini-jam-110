@@ -752,6 +752,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7102896928173912041, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
   m_PrefabInstance: {fileID: 691711479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &735379317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7102896929915015810, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+  m_PrefabInstance: {fileID: 691711479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &740076309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,9 +1330,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1911345870}
     - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _backLogContent
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
       propertyPath: _cardTypeToWork
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressLane
+      value: 
+      objectReference: {fileID: 1911345870}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _toDoContentLane
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressContentLane
+      value: 
+      objectReference: {fileID: 1911345870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
 --- !u!4 &1508549361 stripped
@@ -1531,9 +1552,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1911345870}
     - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _backLogContent
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
       propertyPath: _cardTypeToWork
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressLane
+      value: 
+      objectReference: {fileID: 1911345870}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _toDoContentLane
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressContentLane
+      value: 
+      objectReference: {fileID: 1911345870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
 --- !u!4 &1777909872 stripped
@@ -1610,9 +1647,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1911345870}
     - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _backLogContent
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
       propertyPath: _cardTypeToWork
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressLane
+      value: 
+      objectReference: {fileID: 1911345870}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _toDoContentLane
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressContentLane
+      value: 
+      objectReference: {fileID: 1911345870}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
 --- !u!4 &1914807702 stripped
@@ -1855,6 +1908,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
       propertyPath: _laneContent
+      value: 
+      objectReference: {fileID: 1911345870}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _backLogContent
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressLane
+      value: 
+      objectReference: {fileID: 1911345870}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _toDoContentLane
+      value: 
+      objectReference: {fileID: 735379317}
+    - target: {fileID: 6164887241061845007, guid: eae16330bd80df84a84127c06a55f1f1, type: 3}
+      propertyPath: _inProgressContentLane
       value: 
       objectReference: {fileID: 1911345870}
     m_RemovedComponents: []
