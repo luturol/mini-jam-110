@@ -18,6 +18,7 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _durationText;
     [SerializeField] private TextMeshProUGUI _ownerText;
     [SerializeField] private Image _ownerImage;
+    [SerializeField] private Worker _worker;
 
     private int _durationValue = 0;
     public bool IsDuplicate = false;
@@ -122,4 +123,10 @@ public class Card : MonoBehaviour
     public string GetTitle() => _title;
     public int GetDurationValue() => _durationValue;
     public string GetOwner() => _owner;
+    public void SetWorker(Worker worker)
+    {
+        _worker = worker;
+        _owner = worker.GetWorkerName();
+        _ownerText.text = _owner;
+    }
 }
