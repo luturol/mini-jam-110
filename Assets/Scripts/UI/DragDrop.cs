@@ -5,42 +5,47 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [SerializeField] private Canvas canvas;
+    [SerializeField] private Canvas _canvas;
 
-    private GameObject duplicate;
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
+    private GameObject _duplicate;
+    private RectTransform _rectTransform;
+    private CanvasGroup _canvasGroup;
     public bool DropCorrectly = false;
+
+    private void Start()
+    {
+        _canvas = FindObjectOfType<Canvas>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        duplicate = Instantiate(gameObject);
-        duplicate.transform.position = gameObject.transform.position;
+        _duplicate = Instantiate(gameObject);
+        _duplicate.transform.position = gameObject.transform.position;
 
-        canvasGroup = duplicate.GetComponent<CanvasGroup>();
-        canvasGroup.alpha = .6f;
+        _canvasGroup = _duplicate.GetComponent<CanvasGroup>();
+        _canvasGroup.alpha = .6f;
 
-        rectTransform = duplicate.GetComponent<RectTransform>();
-        rectTransform.sizeDelta = GetComponent<RectTransform>().sizeDelta;
+        _rectTransform = _duplicate.GetComponent<RectTransform>();
+        _rectTransform.sizeDelta = GetComponent<RectTransform>().sizeDelta;
 
-        canvasGroup.blocksRaycasts = false;
+        _canvasGroup.blocksRaycasts = false;
 
-        duplicate.transform.SetParent(canvas.transform);
+        _duplicate.transform.SetParent(_canvas.transform);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true;
+        _canvasGroup.alpha = 1f;
+        _canvasGroup.blocksRaycasts = true;
 
-        if(!DropCorrectly)
+        if (!DropCorrectly)
         {
-            Destroy(duplicate);
+            Destroy(_duplicate);
         }
 
         DropCorrectly = false;
@@ -51,5 +56,5 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
         //não implementar
     }
 
-    public GameObject GetDuplicate() => duplicate;
+    public GameObject GetDuplicate() => _duplicate;
 }
