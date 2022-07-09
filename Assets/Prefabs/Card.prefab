@@ -736,6 +736,7 @@ MonoBehaviour:
   _ownerText: {fileID: 9211348457432163896}
   _ownerImage: {fileID: 100297570242328737}
   _worker: {fileID: 0}
+  _slider: {fileID: 9164178147447417161}
   IsDuplicate: 0
 --- !u!1 &9211348457432163902
 GameObject:

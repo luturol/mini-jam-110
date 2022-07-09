@@ -19,6 +19,7 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _ownerText;
     [SerializeField] private Image _ownerImage;
     [SerializeField] private Worker _worker;
+    [SerializeField] private Slider _slider;
 
     private int _durationValue = 0;
     private TimeCounter _timerCounter;
@@ -38,11 +39,15 @@ public class Card : MonoBehaviour
 
             SetBaseProps();
         }
+
+        _slider.maxValue = _durationValue * 3600;
     }
 
     private void Update()
     {
         _passedTime += _timerCounter.Tick();
+
+        _slider.value = _passedTime;
     }
 
     private int GenerateDurationTime()
