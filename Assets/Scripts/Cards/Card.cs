@@ -47,7 +47,14 @@ public class Card : MonoBehaviour
     {
         _passedTime += _timerCounter.Tick();
 
-        _slider.value = _passedTime;
+        if (_slider.value <= _slider.maxValue)
+        {
+            _slider.value = _passedTime;
+        }
+        else
+        {
+            _timerCounter.Stop();
+        }
     }
 
     private int GenerateDurationTime()
@@ -148,4 +155,6 @@ public class Card : MonoBehaviour
 
         _timerCounter.Start();
     }
+
+    public bool HasCompletedCard() => _slider.value >= _slider.maxValue;
 }

@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class Worker : MonoBehaviour
 {
+    [Header("Lanes")]
     [SerializeField] private GameObject _inProgressContentLane;
     [SerializeField] private GameObject _toDoContentLane;
+    [SerializeField] private GameObject _doneContentLane;
+
+    [Header("Card and Work configurations")]
     [SerializeField] private CardType _cardTypeToWork;
     [SerializeField] private Card _cardDoing;
     [SerializeField] private bool _isAvailableToWork = true;
-
     [SerializeField] private string _workerName;
 
     // Start is called before the first frame update
@@ -35,9 +38,15 @@ public class Worker : MonoBehaviour
                 _cardDoing = card;
                 _isAvailableToWork = false;
 
-                card.transform.SetParent(_inProgressContentLane.transform);
+                _cardDoing.transform.SetParent(_inProgressContentLane.transform);
             }
+        }
 
+        if(_cardDoing != null && _cardDoing.HasCompletedCard())
+        {
+            _cardDoing.transform.SetParent(_doneContentLane.transform);
+            _cardDoing = null;
+            _isAvailableToWork = true;
         }
     }
 
