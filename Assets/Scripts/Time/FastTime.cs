@@ -11,13 +11,13 @@ public class FastTime : MonoBehaviour
 
     private TextMeshProUGUI _text;
     private int days = 0;
-    private TimerCounter _timerCounter;
+    private TimeCounter _timerCounter;
     // Start is called before the first frame update
     void Start()
     {
         _text = GetComponent<TextMeshProUGUI>();
-        
-        _timerCounter = new TimerCounter();
+
+        _timerCounter = new TimeCounter();
         _timerCounter.Start();
     }
 

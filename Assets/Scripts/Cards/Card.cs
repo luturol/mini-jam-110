@@ -21,18 +21,28 @@ public class Card : MonoBehaviour
     [SerializeField] private Worker _worker;
 
     private int _durationValue = 0;
+    private TimeCounter _timerCounter;
+    private float _passedTime = 0f;
+
     public bool IsDuplicate = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        _timerCounter = new TimeCounter();
+
         if (!IsDuplicate)
-        {            
+        {
             _durationValue = GenerateDurationTime();
             var durationText = TranslateDurationTime(_durationValue);
 
             SetBaseProps();
         }
+    }
+
+    private void Update()
+    {
+        _passedTime += _timerCounter.Tick();
     }
 
     private int GenerateDurationTime()
@@ -61,23 +71,24 @@ public class Card : MonoBehaviour
 
     public void DuplicateValues(Card cardOld)
     {
-        SetValues(cardOld.GetCardConfiguration(), cardOld.GetTitle(), cardOld.GetDurationValue(), cardOld.GetOwner());
+        SetValues(cardOld.GetCardConfiguration(), cardOld.GetTitle(), cardOld.GetDurationValue(), cardOld.GetOwner(), cardOld.GetPassedTime());
     }
 
-    private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner)
-    {        
+    private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner, float passedTime)
+    {
         #region setting props
         _cardConfiguration = cardConfiguration;
         _title = title;
         _durationValue = durationValue;
         _owner = owner;
+        _passedTime = passedTime;
         #endregion setting props
 
         SetBaseProps();
     }
 
     private void SetBaseProps()
-    {        
+    {
         #region base setup
 
         if (_cardConfiguration && _cardImage)
@@ -123,10 +134,13 @@ public class Card : MonoBehaviour
     public string GetTitle() => _title;
     public int GetDurationValue() => _durationValue;
     public string GetOwner() => _owner;
+    public float GetPassedTime() => _passedTime;
     public void SetWorker(Worker worker)
     {
         _worker = worker;
         _owner = worker.GetWorkerName();
         _ownerText.text = _owner;
+
+        _timerCounter.Start();
     }
 }

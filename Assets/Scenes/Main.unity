@@ -300,6 +300,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661972922}
     m_Modifications:
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.7575531
+      objectReference: {fileID: 0}
     - target: {fileID: 8320886302390027608, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: m_Name
       value: Event (2)
@@ -840,6 +852,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.7575531
+      objectReference: {fileID: 0}
     - target: {fileID: 4025351746935350879, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: _cardConfiguration
       value: 
@@ -914,6 +938,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661972922}
     m_Modifications:
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.7575531
+      objectReference: {fileID: 0}
     - target: {fileID: 8320886302390027608, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: m_Name
       value: Event (3)
@@ -1168,7 +1204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _passedTime: 0
-  _timeMultiplier: 300
 --- !u!114 &1358988892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,6 +1403,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661972922}
     m_Modifications:
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.7575531
+      objectReference: {fileID: 0}
     - target: {fileID: 8320886302390027608, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: m_Name
       value: Event (4)
@@ -2064,6 +2111,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1661972922}
     m_Modifications:
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213469319970430201, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.7575531
+      objectReference: {fileID: 0}
     - target: {fileID: 8320886302390027608, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: m_Name
       value: Event
