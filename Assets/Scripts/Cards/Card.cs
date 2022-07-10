@@ -10,7 +10,7 @@ public class Card : MonoBehaviour
     [SerializeField] private CardObject _cardConfiguration;
     [SerializeField] private string _title;
     [SerializeField] private string _owner;
-    [SerializeField][Range(1, 3)] private int _priority;
+    [SerializeField] private int _priority = 0;
     [SerializeField] private Image _cardImage;
 
     [Header("Card configuration")]
@@ -31,7 +31,7 @@ public class Card : MonoBehaviour
     private TimeCounter _timerCounter;
     private float _passedTime = 0f;
 
-    public bool IsDuplicate = false;
+    public bool IsDuplicate = false;    
 
     // Start is called before the first frame update
     void Start()
@@ -196,4 +196,8 @@ public class Card : MonoBehaviour
     }
 
     public CardStatus GetStatus() => _cardStatus;
+
+    public void AddPriority() => _priority++;
+    public void RemovePriority() => _priority--;
+    public int GetPriority() => _priority;
 }

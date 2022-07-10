@@ -77,9 +77,11 @@ public class Worker : MonoBehaviour
     {
         return lane.GetComponentsInChildren<Card>()
                                .ToList()
-                               .FirstOrDefault(e => string.IsNullOrEmpty(e.GetOwner()) &&
+                               .Where(e => string.IsNullOrEmpty(e.GetOwner()) &&
                                    (e.GetCardConfiguration().CardType == _cardTypeToWork ||
-                                   (_cardTypeToWork == CardType.GameDesign && e.GetStatus() == CardStatus.ReviewQA)));
+                                   (_cardTypeToWork == CardType.GameDesign && e.GetStatus() == CardStatus.ReviewQA)))
+                                .OrderByDescending(e => e.GetPriority())
+                                .FirstOrDefault();
     }
 
     public string GetWorkerName() => _workerName;

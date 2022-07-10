@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -11.4167
       objectReference: {fileID: 0}
+    - target: {fileID: 7102896929018874920, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: m_TagString
+      value: Review
+      objectReference: {fileID: 0}
     - target: {fileID: 7102896929225342872, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1356,6 +1360,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -11.4167
       objectReference: {fileID: 0}
+    - target: {fileID: 7102896929018874920, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: m_TagString
+      value: ToDo
+      objectReference: {fileID: 0}
     - target: {fileID: 7102896929225342872, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2243,6 +2251,10 @@ PrefabInstance:
     - target: {fileID: 7102896928882263033, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: m_SizeDelta.y
       value: -11.4167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102896929018874920, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: m_TagString
+      value: Done
       objectReference: {fileID: 0}
     - target: {fileID: 7102896929225342872, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: m_AnchorMax.x
