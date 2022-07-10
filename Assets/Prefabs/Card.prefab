@@ -509,8 +509,8 @@ MonoBehaviour:
   _ownerImage: {fileID: 100297570242328737}
   _worker: {fileID: 0}
   _slider: {fileID: 9164178147447417161}
-  _baseSprite: {fileID: 0}
-  _blockedSprite: {fileID: 0}
+  _baseSprite: {fileID: 21300000, guid: 8269bd49d16569e4c9c142942721e2eb, type: 3}
+  _blockedSprite: {fileID: 21300000, guid: c2a1aba2f8ad2654abe255e426d18de9, type: 3}
   _durationValueReview: 0
   _durationValue: 0
   _cardBlocking: {fileID: 0}
