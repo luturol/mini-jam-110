@@ -21,6 +21,8 @@ public class Card : MonoBehaviour
     [SerializeField] private Image _ownerImage;
     [SerializeField] private Worker _worker;
     [SerializeField] private Slider _slider;
+    [SerializeField] private Sprite _baseSprite;
+    [SerializeField] private Sprite _blockedSprite;
 
     [Header("Duration Configurations")]
     [SerializeField] private int _durationValueReview;
@@ -57,9 +59,15 @@ public class Card : MonoBehaviour
     {
         if (IsBlocked())
         {
+            _cardImage.sprite = _blockedSprite;
+
             _timerCounter.Stop();
 
             return;
+        }
+        else
+        {
+            _cardImage.sprite = _baseSprite;
         }
 
         _passedTime += _timerCounter.Tick();
@@ -79,19 +87,19 @@ public class Card : MonoBehaviour
         var time = TimeSpan.FromHours(durationTime);
 
         string timeText = string.Empty;
-        if(time.Days > 0)
+        if (time.Days > 0)
         {
-            timeText += $"{ time.Days }d ";
+            timeText += $"{time.Days}d ";
         }
 
-        if(time.Hours > 0)
+        if (time.Hours > 0)
         {
-            timeText += $"{ time.Hours }h ";
+            timeText += $"{time.Hours}h ";
         }
 
-        if(time.Minutes > 0)
+        if (time.Minutes > 0)
         {
-            timeText += $"{ time.Minutes }m ";
+            timeText += $"{time.Minutes}m ";
         }
 
         return timeText;
@@ -110,10 +118,10 @@ public class Card : MonoBehaviour
     }
 
     private void SetValues(CardObject cardConfiguration, string title, float durationValue, string owner, float passedTime, Card blocked, Card blocking)
-    {        
+    {
         #region setting props
         _cardConfiguration = cardConfiguration;
-        _title = title;        
+        _title = title;
         _durationValue = durationValue;
         _owner = owner;
         _passedTime = passedTime;
