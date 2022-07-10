@@ -40,7 +40,6 @@ public class Card : MonoBehaviour
 
         if (!IsDuplicate)
         {
-            _durationValue = GenerateDurationTime();
             var durationText = TranslateDurationTime(_durationValue);
 
             SetBaseProps();
@@ -60,22 +59,6 @@ public class Card : MonoBehaviour
         else
         {
             _timerCounter.Stop();
-        }
-    }
-
-    private int GenerateDurationTime()
-    {
-        if (_priority == 1)
-        {
-            return Random.Range(1, 4);
-        }
-        else if (_priority == 2)
-        {
-            return Random.Range(1, 25);
-        }
-        else
-        {
-            return Random.Range(24, 72);
         }
     }
 
