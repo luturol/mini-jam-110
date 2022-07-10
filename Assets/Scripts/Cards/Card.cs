@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -73,12 +74,31 @@ public class Card : MonoBehaviour
         }
     }
 
-    private string TranslateDurationTime(int durationTime)
+    private string TranslateDurationTime(float durationTime)
     {
-        if (durationTime <= 24)
-            return durationTime == 24 ? "1d" : durationTime + "h";
-        else
-            return $"{durationTime / 24}d {durationTime % 24}h";
+        var time = TimeSpan.FromHours(durationTime);
+
+        string timeText = string.Empty;
+        if(time.Days > 0)
+        {
+            timeText += $"{ time.Days }d ";
+        }
+
+        if(time.Hours > 0)
+        {
+            timeText += $"{ time.Hours }h ";
+        }
+
+        if(time.Minutes > 0)
+        {
+            timeText += $"{ time.Minutes }m ";
+        }
+
+        return timeText;
+        // if (durationTime <= 24)
+        //     return durationTime == 24 ? "1d" : durationTime + "h";
+        // else
+        //     return $"{durationTime / 24}d {durationTime % 24}h";
     }
 
     public void DuplicateValues(Card cardOld)
@@ -89,7 +109,7 @@ public class Card : MonoBehaviour
             cardOld.GetBlocking());
     }
 
-    private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner, float passedTime, Card blocked, Card blocking)
+    private void SetValues(CardObject cardConfiguration, string title, float durationValue, string owner, float passedTime, Card blocked, Card blocking)
     {        
         #region setting props
         _cardConfiguration = cardConfiguration;
@@ -152,7 +172,7 @@ public class Card : MonoBehaviour
 
     public CardObject GetCardConfiguration() => _cardConfiguration;
     public string GetTitle() => _title;
-    public int GetDurationValue() => _durationValue;
+    public float GetDurationValue() => _durationValue;
     public string GetOwner() => _owner;
     public float GetPassedTime() => _passedTime;
     public void SetWorker(Worker worker)
