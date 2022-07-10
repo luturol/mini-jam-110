@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Backlog
+  - Done
+  - Review
+  - ToDo
   layers:
   - Default
   - TransparentFX

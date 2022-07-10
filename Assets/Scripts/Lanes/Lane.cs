@@ -15,13 +15,19 @@ public class Lane : MonoBehaviour, IDropHandler
         //object being drag
         if (eventData.pointerDrag != null && dragDrop != null)
         {
-            if (this.CompareTag("Backlog"))
+            if (this.CompareTag("Backlog") || this.CompareTag("Done"))
             {
                 dragDrop.DropCorrectly = false;
-                
+
                 return;
             }
-            
+
+            if (this.CompareTag("ToDo"))
+            {
+                var card = eventData.pointerDrag.GetComponent<Card>();
+                card.RemoveOwner();                
+            }
+
             Debug.Log(dragDrop);
             dragDrop.DropCorrectly = true;
 

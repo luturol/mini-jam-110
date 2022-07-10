@@ -21,7 +21,13 @@ public class Card : MonoBehaviour
     [SerializeField] private Worker _worker;
     [SerializeField] private Slider _slider;
 
-    private int _durationValue = 0;
+    [Header("Duration Configurations")]
+    [SerializeField] private float _durationValueReview = 0f;
+    [SerializeField] private int _durationValue = 0;
+
+    [Header("Debug pourposes")]
+    [SerializeField] private CardStatus _cardStatus = CardStatus.ToDo;
+
     private TimeCounter _timerCounter;
     private float _passedTime = 0f;
 
@@ -157,4 +163,26 @@ public class Card : MonoBehaviour
     }
 
     public bool HasCompletedCard() => _slider.value >= _slider.maxValue;
+    public void StopTime() => _timerCounter.Stop();
+    public void RemoveOwner()
+    {
+        _worker = null;
+        _owner = string.Empty;
+        _ownerText.text = _owner;
+
+        _timerCounter.Stop();
+    }
+
+    public void SetStatus(CardStatus status)
+    {
+        if (status == CardStatus.ReviewQA)
+        {
+            _passedTime = 0f;
+            _slider.value = 0f;
+            _slider.maxValue = _durationValueReview * 3600;
+        }
+        _cardStatus = status;
+    }
+
+    public CardStatus GetStatus() => _cardStatus;
 }

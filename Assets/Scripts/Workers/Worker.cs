@@ -6,8 +6,9 @@ using UnityEngine;
 public class Worker : MonoBehaviour
 {
     [Header("Lanes")]
-    [SerializeField] private GameObject _inProgressContentLane;
     [SerializeField] private GameObject _toDoContentLane;
+    [SerializeField] private GameObject _inProgressContentLane;
+    [SerializeField] private GameObject _reviewContentLane;
     [SerializeField] private GameObject _doneContentLane;
 
     [Header("Card and Work configurations")]
@@ -27,27 +28,60 @@ public class Worker : MonoBehaviour
     {
         if (_cardDoing == null && _isAvailableToWork)
         {
-            var card = _toDoContentLane.GetComponentsInChildren<Card>()
-                        .ToList()
-                        .FirstOrDefault(e => string.IsNullOrEmpty(e.GetOwner()) &&
-                            e.GetCardConfiguration().CardType == _cardTypeToWork);
+            Card card = null;
+
+            if (_cardTypeToWork == CardType.GameDesign)
+            {
+                card = GetAvailableCardFromLane(_reviewContentLane);
+            }
+            
+            if(card == null)
+            {
+                card = GetAvailableCardFromLane(_toDoContentLane);
+            }
 
             if (card != null)
             {
+                Debug.Log($"Pegou um card na fila {card.GetStatus()}");
                 card.SetWorker(this);
                 _cardDoing = card;
                 _isAvailableToWork = false;
-
-                _cardDoing.transform.SetParent(_inProgressContentLane.transform);
+                
+                if(_cardDoing.GetStatus() == CardStatus.ToDo)           
+                {
+                    _cardDoing.transform.SetParent(_inProgressContentLane.transform); 
+                    _cardDoing.SetStatus(CardStatus.InProgress);
+                }                                   
             }
         }
 
-        if(_cardDoing != null && _cardDoing.HasCompletedCard())
+        if (_cardDoing != null && _cardDoing.HasCompletedCard())
         {
-            _cardDoing.transform.SetParent(_doneContentLane.transform);
+            if (_cardDoing.GetStatus() == CardStatus.InProgress)
+            {
+                _cardDoing.transform.SetParent(_reviewContentLane.transform);                
+                _cardDoing.SetStatus(CardStatus.ReviewQA);                
+                _cardDoing.RemoveOwner();
+            }
+            else if (_cardDoing.GetStatus() == CardStatus.ReviewQA)
+            {
+                _cardDoing.transform.SetParent(_doneContentLane.transform);
+                _cardDoing.SetStatus(CardStatus.Done);
+            }
+
+            
             _cardDoing = null;
             _isAvailableToWork = true;
         }
+    }
+
+    private Card GetAvailableCardFromLane(GameObject lane)
+    {
+        return lane.GetComponentsInChildren<Card>()
+                               .ToList()
+                               .FirstOrDefault(e => string.IsNullOrEmpty(e.GetOwner()) &&
+                                   (e.GetCardConfiguration().CardType == _cardTypeToWork || 
+                                   (_cardTypeToWork == CardType.GameDesign && e.GetStatus() == CardStatus.ReviewQA)));
     }
 
     public string GetWorkerName() => _workerName;
