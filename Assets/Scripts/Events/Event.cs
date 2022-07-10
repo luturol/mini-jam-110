@@ -9,6 +9,7 @@ public class Event : MonoBehaviour
 
     private float _passedTime;
     private Card _card;
+    // private BossNotification _bossNotification;
 
     private void Start()
     {
