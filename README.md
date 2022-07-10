@@ -12,3 +12,5 @@
 1. Fazer a mecânica de bugs
 
     Gerar uma probabilidade de que a task que foi para review ou done gerar uma nova de bug
+
+1. Fazer o gerente diminuindo o prazo de entrega do jogo
