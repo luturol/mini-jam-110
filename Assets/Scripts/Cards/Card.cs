@@ -22,7 +22,7 @@ public class Card : MonoBehaviour
     [SerializeField] private Slider _slider;
 
     [Header("Duration Configurations")]
-    [SerializeField] private float _durationValueReview = 0f;
+    [SerializeField] private int _durationValueReview = 0;
     [SerializeField] private int _durationValue = 0;
 
     [Header("Debug pourposes")]
@@ -82,9 +82,9 @@ public class Card : MonoBehaviour
     private string TranslateDurationTime(int durationTime)
     {
         if (durationTime <= 24)
-            return _durationValue == 24 ? "1d" : _durationValue + "h";
+            return durationTime == 24 ? "1d" : durationTime + "h";
         else
-            return $"{_durationValue / 24}d {_durationValue % 24}h";
+            return $"{durationTime / 24}d {durationTime % 24}h";
     }
 
     public void DuplicateValues(Card cardOld)
@@ -180,7 +180,13 @@ public class Card : MonoBehaviour
             _passedTime = 0f;
             _slider.value = 0f;
             _slider.maxValue = _durationValueReview * 3600;
+            _durationText.text = TranslateDurationTime(_durationValueReview);
         }
+        else if(status == CardStatus.Done)
+        {
+            _durationText.text = TranslateDurationTime(_durationValueReview + _durationValue);
+        }
+
         _cardStatus = status;
     }
 
