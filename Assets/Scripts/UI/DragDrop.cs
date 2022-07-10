@@ -27,7 +27,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
 
         if (cardNew && cardOld)
         {
-            cardNew.IsDuplicate = true;
+            cardNew.IsDuplicate = true;            
             _duplicate.GetComponent<Card>().DuplicateValues(cardOld);
         }
 

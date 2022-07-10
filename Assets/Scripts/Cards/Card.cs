@@ -22,9 +22,9 @@ public class Card : MonoBehaviour
     [SerializeField] private Slider _slider;
 
     [Header("Duration Configurations")]
-    [SerializeField] private int _durationValueReview = 0;
-    [SerializeField] private int _durationValue = 0;
-    
+    [SerializeField] private int _durationValueReview;
+    [SerializeField] private float _durationValue;
+
     [Header("Blocked Configurations")]
     [SerializeField] private Card _cardBlocking; //card que está bloquando o atual
     [SerializeField] private Card _cardBlocked; //card que foi bloqueado
@@ -90,15 +90,14 @@ public class Card : MonoBehaviour
     }
 
     private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner, float passedTime, Card blocked, Card blocking)
-    {
-        Debug.Log("Setou valores " + owner);
+    {        
         #region setting props
         _cardConfiguration = cardConfiguration;
-        _title = title;
+        _title = title;        
         _durationValue = durationValue;
         _owner = owner;
         _passedTime = passedTime;
-        _cardBlocked = blocked;        
+        _cardBlocked = blocked;
         _cardBlocking = blocking;
 
         _cardBlocked?.SetNewBlockingReferece(this);

@@ -678,6 +678,14 @@ PrefabInstance:
       value: 0.7575531
       objectReference: {fileID: 0}
     - target: {fileID: 4025351746935350879, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: _title
+      value: Resolver bug review
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025351746935350879, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: _durationValue
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025351746935350879, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: _durationValueReview
       value: 3
       objectReference: {fileID: 0}
@@ -1764,6 +1772,10 @@ PrefabInstance:
       propertyPath: _cardBlocked
       value: 
       objectReference: {fileID: 1796890592}
+    - target: {fileID: 4025351746935350879, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
+      propertyPath: _durationValue
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4025351746935350879, guid: 631eb4505c6ddc142934bfa132ca167d, type: 3}
       propertyPath: _cardConfiguration
       value: 

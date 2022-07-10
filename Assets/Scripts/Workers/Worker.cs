@@ -57,6 +57,7 @@ public class Worker : MonoBehaviour
 
         if (_cardDoing != null && _cardDoing.HasCompletedCard())
         {
+            Debug.Log("Completou o card " + _cardDoing.GetTitle());
             if (_cardDoing.GetStatus() == CardStatus.InProgress)
             {
                 _cardDoing.transform.SetParent(_reviewContentLane.transform);
