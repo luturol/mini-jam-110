@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum CardStatus
 {
+    BackLog,
     ToDo,
     InProgress,
     ReviewQA,

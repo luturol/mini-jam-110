@@ -8,6 +8,7 @@ TagManager:
   - Done
   - Review
   - ToDo
+  - Blocked
   layers:
   - Default
   - TransparentFX

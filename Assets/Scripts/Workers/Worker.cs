@@ -78,6 +78,7 @@ public class Worker : MonoBehaviour
         return lane.GetComponentsInChildren<Card>()
                                .ToList()
                                .Where(e => string.IsNullOrEmpty(e.GetOwner()) &&
+                                    !e.IsBlocked() &&
                                    (e.GetCardConfiguration().CardType == _cardTypeToWork ||
                                    (_cardTypeToWork == CardType.GameDesign && e.GetStatus() == CardStatus.ReviewQA)))
                                 .OrderByDescending(e => e.GetPriority())

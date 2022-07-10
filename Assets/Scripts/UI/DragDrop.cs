@@ -21,13 +21,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
     {
         _duplicate = Instantiate(gameObject);
         _duplicate.transform.position = gameObject.transform.position;
-        
+
         var cardNew = _duplicate.GetComponent<Card>();
         var cardOld = GetComponent<Card>();
 
         if (cardNew && cardOld)
         {
-            cardNew.IsDuplicate = true;            
+            cardNew.IsDuplicate = true;
             _duplicate.GetComponent<Card>().DuplicateValues(cardOld);
         }
 
@@ -58,7 +58,18 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBegin
         }
         else
         {
-            Destroy(gameObject);
+            //Não permitir mover
+            // var card = eventData.pointerDrag.GetComponent<Card>();
+
+            // if (card && card.IsBlocked())
+            // {
+            //     Destroy(_duplicate);
+            // }
+            // else
+            // {
+                Destroy(gameObject);
+            // }
+
         }
 
         DropCorrectly = false;

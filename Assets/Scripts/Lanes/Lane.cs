@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Lane : MonoBehaviour, IDropHandler
 {
+    [SerializeField] private GameObject _blockedContentLane;
+
     private VerticalLayoutGroup _content;
 
     public void OnDrop(PointerEventData eventData)
@@ -21,22 +23,32 @@ public class Lane : MonoBehaviour, IDropHandler
                 dragDrop.DropCorrectly = false;
 
                 return;
-            }            
+            }
 
             dragDrop.DropCorrectly = true;
 
             var duplicate = dragDrop.GetDuplicate();
-
+            var card = duplicate.GetComponent<Card>();
+                                    
             if (this.CompareTag("ToDo"))
             {
                 Debug.Log("Removeu dono");
-                var card = duplicate.GetComponent<Card>();
+
                 card.SetStatus(CardStatus.ToDo);
-                card.RemoveOwner();                
+                card.RemoveOwner();
             }
 
-            duplicate.transform.SetParent(_content.transform);
-            duplicate.transform.localScale = new Vector3(1, 1, 1);
+            Debug.Log("Esta bloqueado: " + card.IsBlocked());
+            if (card.IsBlocked())
+            {
+                //move para blocked
+                ChangeLaneFromCard(duplicate, _blockedContentLane);
+            }
+            else
+            {
+                ChangeLaneFromCard(duplicate, _content.gameObject);
+            }
+
         }
     }
 
@@ -46,9 +58,9 @@ public class Lane : MonoBehaviour, IDropHandler
         _content = GetComponentInChildren<VerticalLayoutGroup>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ChangeLaneFromCard(GameObject duplicate, GameObject lane)
     {
-
+        duplicate.transform.SetParent(lane.transform);
+        duplicate.transform.localScale = new Vector3(1, 1, 1);
     }
 }

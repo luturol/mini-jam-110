@@ -24,14 +24,18 @@ public class Card : MonoBehaviour
     [Header("Duration Configurations")]
     [SerializeField] private int _durationValueReview = 0;
     [SerializeField] private int _durationValue = 0;
+    
+    [Header("Blocked Configurations")]
+    [SerializeField] private Card _cardBlocking; //card que está bloquando o atual
+    [SerializeField] private Card _cardBlocked; //card que foi bloqueado
 
     [Header("Debug pourposes")]
-    [SerializeField] private CardStatus _cardStatus = CardStatus.ToDo;
+    [SerializeField] private CardStatus _cardStatus = CardStatus.BackLog;
 
     private TimeCounter _timerCounter;
     private float _passedTime = 0f;
 
-    public bool IsDuplicate = false;    
+    public bool IsDuplicate = false;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +54,13 @@ public class Card : MonoBehaviour
 
     private void Update()
     {
+        if (IsBlocked())
+        {
+            _timerCounter.Stop();
+
+            return;
+        }
+
         _passedTime += _timerCounter.Tick();
 
         if (_slider.value <= _slider.maxValue)
@@ -72,10 +83,13 @@ public class Card : MonoBehaviour
 
     public void DuplicateValues(Card cardOld)
     {
-        SetValues(cardOld.GetCardConfiguration(), cardOld.GetTitle(), cardOld.GetDurationValue(), cardOld.GetOwner(), cardOld.GetPassedTime());
+        SetValues(cardOld.GetCardConfiguration(), cardOld.GetTitle(),
+            cardOld.GetDurationValue(), cardOld.GetOwner(),
+            cardOld.GetPassedTime(), cardOld.GetBlocked(),
+            cardOld.GetBlocking());
     }
 
-    private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner, float passedTime)
+    private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner, float passedTime, Card blocked, Card blocking)
     {
         Debug.Log("Setou valores " + owner);
         #region setting props
@@ -84,6 +98,11 @@ public class Card : MonoBehaviour
         _durationValue = durationValue;
         _owner = owner;
         _passedTime = passedTime;
+        _cardBlocked = blocked;        
+        _cardBlocking = blocking;
+
+        _cardBlocked?.SetNewBlockingReferece(this);
+        _cardBlocking?.SetNewBlockedReferece(this);
         #endregion setting props
 
         SetBaseProps();
@@ -151,11 +170,11 @@ public class Card : MonoBehaviour
 
     public void RemoveOwner()
     {
-        if(_worker != null)
+        if (_worker != null)
             _worker.DropCard();
-        
+
         _worker = null;
-        _owner = string.Empty;        
+        _owner = string.Empty;
         _ownerText.text = string.Empty;
 
         _timerCounter.Stop();
@@ -170,7 +189,7 @@ public class Card : MonoBehaviour
             _slider.maxValue = _durationValueReview * 3600;
             _durationText.text = TranslateDurationTime(_durationValueReview);
         }
-        else if(status == CardStatus.Done)
+        else if (status == CardStatus.Done)
         {
             _durationText.text = TranslateDurationTime(_durationValueReview + _durationValue);
         }
@@ -183,4 +202,27 @@ public class Card : MonoBehaviour
     public void AddPriority() => _priority++;
     public void RemovePriority() => _priority--;
     public int GetPriority() => _priority;
+
+    public Card GetBlocked() => _cardBlocked;
+    public Card GetBlocking() => _cardBlocking;
+
+    /// <summary>
+    /// Atualiza a referência do Blocking no Blocked
+    /// </summary>
+    /// <param name="blocking"></param>
+    public void SetNewBlockingReferece(Card blocking)
+    {
+        _cardBlocking = blocking;
+    }
+
+    /// <summary>
+    /// Atualiza a referência do Blocked no Blocking
+    /// </summary>
+    /// <param name="blocked"></param>
+    public void SetNewBlockedReferece(Card blocked)
+    {
+        _cardBlocked = blocked;
+    }
+
+    public bool IsBlocked() => _cardBlocking && _cardBlocking.GetStatus() != CardStatus.Done;
 }
