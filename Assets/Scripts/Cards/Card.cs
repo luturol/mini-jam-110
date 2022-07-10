@@ -36,13 +36,12 @@ public class Card : MonoBehaviour
     [SerializeField] private CardStatus _cardStatus = CardStatus.BackLog;
 
     private TimeCounter _timerCounter;
-    private float _passedTime = 0f;
-
+    private float _passedTime = 0f;    
     public bool IsDuplicate = false;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         _timerCounter = new TimeCounter();
 
         if (!IsDuplicate)
@@ -252,4 +251,13 @@ public class Card : MonoBehaviour
     }
 
     public bool IsBlocked() => _cardBlocking && _cardBlocking.GetStatus() != CardStatus.Done;
+
+    public void OnCard_Click()
+    {
+        Debug.Log("CLicou");
+        if(IsBlocked())
+        {
+            _cardBlocking.GetComponent<Flash>().FlashAnimation();
+        }
+    }
 }

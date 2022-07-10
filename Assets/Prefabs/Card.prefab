@@ -415,8 +415,10 @@ GameObject:
   - component: {fileID: 9211348457065914984}
   - component: {fileID: 9211348457065914986}
   - component: {fileID: 3198494379412816241}
+  - component: {fileID: 7685070421997684226}
   - component: {fileID: 9211348457065914987}
   - component: {fileID: 4765790151306259752}
+  - component: {fileID: 5917461974646344217}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -472,6 +474,62 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7685070421997684226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211348457065914991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 95966658218945409}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4765790151306259752}
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: OnCard_Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9211348457065914987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,6 +575,21 @@ MonoBehaviour:
   _cardBlocked: {fileID: 0}
   _cardStatus: 0
   IsDuplicate: 0
+--- !u!114 &5917461974646344217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211348457065914991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21334cb7fe104a94394c47af5355bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashMaterial: {fileID: 2100000, guid: d1fb11e18fcde214d9d8030bd4c9817d, type: 2}
+  _duration: 0.3
+  _image: {fileID: 95966658218945409}
 --- !u!1 &9211348457432163902
 GameObject:
   m_ObjectHideFlags: 0
