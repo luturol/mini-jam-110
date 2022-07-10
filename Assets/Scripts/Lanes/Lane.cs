@@ -12,6 +12,7 @@ public class Lane : MonoBehaviour, IDropHandler
     {
         var dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
 
+        Debug.Log("Dropou algo na tag " + this.tag);
         //object being drag
         if (eventData.pointerDrag != null && dragDrop != null)
         {
@@ -20,18 +21,19 @@ public class Lane : MonoBehaviour, IDropHandler
                 dragDrop.DropCorrectly = false;
 
                 return;
-            }
+            }            
 
-            if (this.CompareTag("ToDo"))
-            {
-                var card = eventData.pointerDrag.GetComponent<Card>();
-                card.RemoveOwner();                
-            }
-
-            Debug.Log(dragDrop);
             dragDrop.DropCorrectly = true;
 
             var duplicate = dragDrop.GetDuplicate();
+
+            if (this.CompareTag("ToDo"))
+            {
+                Debug.Log("Removeu dono");
+                var card = duplicate.GetComponent<Card>();
+                card.SetStatus(CardStatus.ToDo);
+                card.RemoveOwner();                
+            }
 
             duplicate.transform.SetParent(_content.transform);
             duplicate.transform.localScale = new Vector3(1, 1, 1);

@@ -94,6 +94,7 @@ public class Card : MonoBehaviour
 
     private void SetValues(CardObject cardConfiguration, string title, int durationValue, string owner, float passedTime)
     {
+        Debug.Log("Setou valores " + owner);
         #region setting props
         _cardConfiguration = cardConfiguration;
         _title = title;
@@ -164,11 +165,15 @@ public class Card : MonoBehaviour
 
     public bool HasCompletedCard() => _slider.value >= _slider.maxValue;
     public void StopTime() => _timerCounter.Stop();
+
     public void RemoveOwner()
     {
+        if(_worker != null)
+            _worker.DropCard();
+        
         _worker = null;
-        _owner = string.Empty;
-        _ownerText.text = _owner;
+        _owner = string.Empty;        
+        _ownerText.text = string.Empty;
 
         _timerCounter.Stop();
     }

@@ -34,8 +34,8 @@ public class Worker : MonoBehaviour
             {
                 card = GetAvailableCardFromLane(_reviewContentLane);
             }
-            
-            if(card == null)
+
+            if (card == null)
             {
                 card = GetAvailableCardFromLane(_toDoContentLane);
             }
@@ -46,12 +46,12 @@ public class Worker : MonoBehaviour
                 card.SetWorker(this);
                 _cardDoing = card;
                 _isAvailableToWork = false;
-                
-                if(_cardDoing.GetStatus() == CardStatus.ToDo)           
+
+                if (_cardDoing.GetStatus() == CardStatus.ToDo)
                 {
-                    _cardDoing.transform.SetParent(_inProgressContentLane.transform); 
+                    _cardDoing.transform.SetParent(_inProgressContentLane.transform);
                     _cardDoing.SetStatus(CardStatus.InProgress);
-                }                                   
+                }
             }
         }
 
@@ -59,8 +59,8 @@ public class Worker : MonoBehaviour
         {
             if (_cardDoing.GetStatus() == CardStatus.InProgress)
             {
-                _cardDoing.transform.SetParent(_reviewContentLane.transform);                
-                _cardDoing.SetStatus(CardStatus.ReviewQA);                
+                _cardDoing.transform.SetParent(_reviewContentLane.transform);
+                _cardDoing.SetStatus(CardStatus.ReviewQA);
                 _cardDoing.RemoveOwner();
             }
             else if (_cardDoing.GetStatus() == CardStatus.ReviewQA)
@@ -69,9 +69,7 @@ public class Worker : MonoBehaviour
                 _cardDoing.SetStatus(CardStatus.Done);
             }
 
-            
-            _cardDoing = null;
-            _isAvailableToWork = true;
+            DropCard();
         }
     }
 
@@ -80,9 +78,15 @@ public class Worker : MonoBehaviour
         return lane.GetComponentsInChildren<Card>()
                                .ToList()
                                .FirstOrDefault(e => string.IsNullOrEmpty(e.GetOwner()) &&
-                                   (e.GetCardConfiguration().CardType == _cardTypeToWork || 
+                                   (e.GetCardConfiguration().CardType == _cardTypeToWork ||
                                    (_cardTypeToWork == CardType.GameDesign && e.GetStatus() == CardStatus.ReviewQA)));
     }
 
     public string GetWorkerName() => _workerName;
+    public void DropCard()
+    {
+        Debug.Log("Dropou carta");
+        _isAvailableToWork = true;
+        _cardDoing = null;
+    }
 }
