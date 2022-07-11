@@ -68,6 +68,8 @@ public class Worker : MonoBehaviour
             {
                 _cardDoing.transform.SetParent(_doneContentLane.transform);
                 _cardDoing.SetStatus(CardStatus.Done);
+
+                CardManagement.Instance?.DoneCards.Add(_cardDoing.GetTitle());
             }
 
             DropCard();
