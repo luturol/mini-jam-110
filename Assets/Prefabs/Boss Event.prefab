@@ -315,9 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd0044e28b55a4446b14de042e9d448d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeInSecods: 10
+  _timeInSecods: 60
   _bossNotification: {fileID: 4126475355057481349}
-  _secondsToWaitBeforeHide: 20
+  _secondsToWaitBeforeHide: 10
 --- !u!1 &4126475354888159028
 GameObject:
   m_ObjectHideFlags: 0

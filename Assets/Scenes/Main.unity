@@ -3878,7 +3878,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _timeInSecods
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254590, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: m_Name
@@ -5436,7 +5436,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _timeInSecods
-      value: 250
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254590, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: m_Name
@@ -7751,7 +7751,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _timeInSecods
-      value: 325
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254590, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: m_Name
@@ -8628,7 +8628,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _timeInSecods
-      value: 280
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254590, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: m_Name
@@ -9279,7 +9279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _timeInSecods
-      value: 180
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254590, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: m_Name
@@ -9472,14 +9472,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 51344067}
     m_Modifications:
-    - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
-      propertyPath: _timeInSecods
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126475354775254588, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
-      propertyPath: _secondsToWaitBeforeHide
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4126475354775254590, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: m_Name
       value: Boss Event

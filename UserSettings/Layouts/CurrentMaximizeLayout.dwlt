@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 373
     height: 785
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1049}
-      m_SelectedIDs: b44effff
-      m_LastClickedID: -45388
-      m_ExpandedIDs: e450fffffa52ffff1a54fffff255ffff7857ffffa058ffffb059ffffb85cffff265effffba5fffffe060ffffba62ffffec63ffffbe64fffffe65ffffa267ffffb269ffff586affffc26bffffda6cffff946effff2a71ffff6072ffff1874ffff7c75fffff276ffff1079ffffa07affffb07dffffe07effff7280ffff9e81ffff8283ffff6885ffff6caefffff0afffffcab1ffffecb3ffffa4b5ffff7eb7ffff00baffff88bcffff7ec0ffff56c2ffff1cc4ffff74c7ffff5cc8ffff08d7ffffc4d9ffff1edaffffd8e4ffff9ce7ffff1ae9ffff3af9ffff60faffff3a610000f48300002e8f0000a88f0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 78f4feff
+      m_LastClickedID: -68488
+      m_ExpandedIDs: 4cf2feffeaf2feff7cf4feffe2fdfeff2603ffff060dffff540effffba2dffff824fffff6cb8ffffeeb8ffff48e0ffffe6e0ffff78e2ffff6ee5ffffdeebffff22f1ffff02fbffff4260000012610000d4f1000038f2000008f30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.47097, y: 501.14578, z: 6.68788}
+    m_Target: {x: 518.17334, y: 339.7825, z: -0.84166163}
     speed: 2
-    m_Value: {x: -7.47097, y: 501.14578, z: 6.68788}
+    m_Value: {x: 518.17334, y: 339.7825, z: -0.84166163}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 635.31366
+    m_Target: 382.06476
     speed: 2
-    m_Value: 635.31366
+    m_Value: 382.06476
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\faculdade\\Reposit\xF3rios\\repositorios\\mini-jam-110"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 91}
-    m_SelectedIDs: ba630000
-    m_LastClickedID: 25530
-    m_ExpandedIDs: 00000000aa63000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 63}
+    m_SelectedIDs: d6640000
+    m_LastClickedID: 25814
+    m_ExpandedIDs: 00000000c8640000d864000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,7 +715,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa63000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000c8640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,8 +740,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b44effff
-    m_LastClickedInstanceID: -45388
+    m_SelectedInstanceIDs: 78f4feff
+    m_LastClickedInstanceID: -68488
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -793,7 +793,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 62
     y: 858
-    width: 1480
+    width: 1426
     height: 181
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
