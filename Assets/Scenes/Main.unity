@@ -142,6 +142,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1158234835}
     m_Modifications:
     - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: _dropSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 079c7b03fdabb8a4c858031b086653b7, type: 3}
+    - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: _blockContentLane
       value: 
       objectReference: {fileID: 866196312}
@@ -707,6 +711,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1158234835}
     m_Modifications:
+    - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: _dropSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 079c7b03fdabb8a4c858031b086653b7, type: 3}
     - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: _blockContentLane
       value: 
@@ -1445,6 +1453,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1158234835}
     m_Modifications:
     - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: _dropSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 079c7b03fdabb8a4c858031b086653b7, type: 3}
+    - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: _blockedContentLane
       value: 
       objectReference: {fileID: 866196312}
@@ -2141,6 +2153,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1158234835}
     m_Modifications:
     - target: {fileID: 455328742, guid: c6cb26b9d952d13449a33fc56b81d7cf, type: 3}
+      propertyPath: _dropSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 079c7b03fdabb8a4c858031b086653b7, type: 3}
+    - target: {fileID: 455328742, guid: c6cb26b9d952d13449a33fc56b81d7cf, type: 3}
       propertyPath: _blockContentLane
       value: 
       objectReference: {fileID: 866196312}
@@ -2318,6 +2334,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1158234835}
     m_Modifications:
+    - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
+      propertyPath: _dropSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 079c7b03fdabb8a4c858031b086653b7, type: 3}
     - target: {fileID: 1351644284, guid: c8abce8b8b217a244a450bf4020df313, type: 3}
       propertyPath: _blockContentLane
       value: 
@@ -9449,6 +9469,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8172821646310031511, guid: c39a893d5cdf47447a91b5fb2f32125f, type: 3}
+      propertyPath: _dropSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 079c7b03fdabb8a4c858031b086653b7, type: 3}
     - target: {fileID: 8172821646310031511, guid: c39a893d5cdf47447a91b5fb2f32125f, type: 3}
       propertyPath: _blockedContentLane
       value: 

@@ -3,22 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(AudioSource))]
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private AudioClip _dragSfx;
 
     private GameObject _duplicate;
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
+    private AudioSource _audioSource;
     public bool DropCorrectly = false;
 
     private void Start()
     {
         _canvas = FindObjectOfType<Canvas>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        _audioSource.PlayOneShot(_dragSfx);
+        
         _duplicate = Instantiate(gameObject);
         _duplicate.transform.position = gameObject.transform.position;
 

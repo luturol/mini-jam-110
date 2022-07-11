@@ -4,14 +4,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Lane : MonoBehaviour, IDropHandler
 {
     [SerializeField] private GameObject _blockedContentLane;
+    [SerializeField] private AudioClip _dropSfx;
 
     private VerticalLayoutGroup _content;
+    private AudioSource _audioSource;
+    // Start is called before the first frame update
+    void Start()
+    {
+        _content = GetComponentInChildren<VerticalLayoutGroup>();
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
+        _audioSource.PlayOneShot(_dropSfx);
+        
         var dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
 
         Debug.Log("Dropou algo na tag " + this.tag);
@@ -29,7 +40,7 @@ public class Lane : MonoBehaviour, IDropHandler
 
             var duplicate = dragDrop.GetDuplicate();
             var card = duplicate.GetComponent<Card>();
-                                    
+
             if (this.CompareTag("ToDo"))
             {
                 Debug.Log("Removeu dono");
@@ -50,12 +61,6 @@ public class Lane : MonoBehaviour, IDropHandler
             }
 
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _content = GetComponentInChildren<VerticalLayoutGroup>();
     }
 
     private void ChangeLaneFromCard(GameObject duplicate, GameObject lane)
