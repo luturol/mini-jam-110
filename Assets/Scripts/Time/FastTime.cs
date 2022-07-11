@@ -9,8 +9,7 @@ public class FastTime : MonoBehaviour
     [SerializeField] private float _passedTime;
     [SerializeField] public static float TimeMultiplier = 3000f;
 
-    private TextMeshProUGUI _text;
-    private int days = 0;
+    private TextMeshProUGUI _text;    
     private TimeCounter _timerCounter;
     // Start is called before the first frame update
     void Start()
@@ -30,4 +29,6 @@ public class FastTime : MonoBehaviour
         
         _text.text = $"{ time.Days.ToString("D2")}d { time.Hours.ToString("D2") }:{ time.Minutes.ToString("D2") }:{ time.Seconds.ToString("D2") }";
     }
+
+    public float GetPassedTime() => _passedTime;
 }
