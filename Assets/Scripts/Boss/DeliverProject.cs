@@ -12,6 +12,10 @@ public class DeliverProject : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI _dueDateText;
+    
+
+    [Header("Game Over")]
+    [SerializeField] private bool _enableGameOver = false;
         
     // Update is called once per frame
     void Update()
@@ -23,7 +27,8 @@ public class DeliverProject : MonoBehaviour
         if(passedTime.Days >= _dueDate)
         {
             //Game Over
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if(_enableGameOver)
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
