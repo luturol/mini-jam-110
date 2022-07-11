@@ -8,8 +8,7 @@ env:
   UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
 jobs:
-  buildWebGL:
-    needs: testRunner
+  buildWebGL:    
     name: Build for WebGL 🖥️
     runs-on: ubuntu-latest
     strategy:
