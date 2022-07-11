@@ -6348,6 +6348,7 @@ MonoBehaviour:
   _dueDate: 30
   _fastTime: {fileID: 1358988891}
   _dueDateText: {fileID: 78104547}
+  _enableGameOver: 0
 --- !u!1001 &1346625037
 PrefabInstance:
   m_ObjectHideFlags: 0
