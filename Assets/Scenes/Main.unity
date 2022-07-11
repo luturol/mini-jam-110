@@ -7455,6 +7455,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 463124056}
     m_Modifications:
+    - target: {fileID: 850925349998457965, guid: efe6c883080047342bae317eee171b62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912222677406745871, guid: efe6c883080047342bae317eee171b62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849925314991667303, guid: efe6c883080047342bae317eee171b62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5182687250156147268, guid: efe6c883080047342bae317eee171b62, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7542,6 +7554,10 @@ PrefabInstance:
     - target: {fileID: 5182687250156147269, guid: efe6c883080047342bae317eee171b62, type: 3}
       propertyPath: m_Name
       value: Subtitles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709844436391251332, guid: efe6c883080047342bae317eee171b62, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe6c883080047342bae317eee171b62, type: 3}
