@@ -8680,11 +8680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4126475355057481347, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _minusDays
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4126475355057481347, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
       propertyPath: _notification
-      value: Sorry, but you need to deliver in 15 days :(
+      value: Sorry, but you need to deliver in 10 days :(
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 432f5070b828c3e43bdb9f12826deaf2, type: 3}
